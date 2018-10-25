@@ -1,0 +1,71 @@
+<div class="custom-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="icon-wrapper text-left">
+        <!-- hamburger menu -->
+        <i class="fas fa-bars fa-2x white-color-hamburger-menu"></i>
+      </div>
+      <div class="icon-wrapper text-center">
+        <!-- hamburger menu -->
+        <i class="fas fa-bars fa-2x white-color-hamburger-menu"></i>
+      </div>
+      <div class="icon-wrapper text-right">
+        <!-- hamburger menu -->
+        <i class="fas fa-bars fa-2x white-color-hamburger-menu"></i>
+        <i class="fas fa-bars fa-2x white-color-hamburger-menu"></i>
+        <i class="fas fa-bars fa-2x white-color-hamburger-menu"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row p-4">
+    <div class="col-sm-12">
+      <div class="media">
+        <img class="profile-photo align-self-center mr-3" src="../../../assets/images/profile-photo.png" alt="Generic placeholder image">
+        <div class="media-body">
+          <a href="#" class="handle">@JohnDoe</a>
+          <p>John Doe</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="row pl-4 pr-4 text-left">
+        <div class="col">
+          <p class="profile-stat">Tweets
+            <span>{{tweetsCount}}</span>
+          </p>
+        </div>
+        <div class="col">
+          <p class="profile-stat">Following
+            <span>{{followersCount}}</span>
+          </p>
+        </div>
+        <div class="col">
+          <p class="profile-stat">Followers
+            <span>{{followingCount}}</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-8">
+      <div class="profile-stats-wrapper">
+        <div class="profile-stats">
+          <a class="nav-link-profile" routerLink="/home" routerLinkActive="active">Home</a>
+        </div>
+        <div class="profile-stats">
+          <a class="nav-link-profile" routerLink="/notifications" routerLinkActive="active">Notifications</a>
+        </div>
+        <div class="profile-stats">
+          <a class="nav-link-profile" routerLink="/discover" routerLinkActive="active">#Discover</a>
+        </div>
+        <div class="profile-stats">
+          <a class="nav-link-profile" routerLink="/me" routerLinkActive="active">Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

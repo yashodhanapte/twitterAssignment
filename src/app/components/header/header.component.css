@@ -1,0 +1,100 @@
+.custom-header {
+    background:#fefefe;
+    background:linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/-g7NsTaeREoE/VkOjlS3dfFI/AAAAAAAAHmw/Hh00F1bGfmg/s1280-Ic42/01.jpg) no-repeat center / cover;
+}
+.profile-img{
+    width:100px;
+    height:100px;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin:5px;
+}
+.nav-div{
+    background-color: black;
+    width:100%;
+    height:50px;
+}
+.white-color-hamburger-menu{
+    color:white;
+    cursor:pointer;
+    margin:10px;
+}
+
+.profile-container {
+    display:flex;
+    align-items: center;
+}
+.profile-photo {
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    overflow:hidden;
+    float:left;
+}
+
+.profile-stats-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    height:100%;
+}
+.profile-stats {
+    flex:auto;
+    text-align: center;
+}
+
+.profile-stats > a {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 1.45em;
+    text-decoration: none !important;
+}
+
+.profile-stat {
+    font-weight:300;
+    color:white;
+}
+
+.profile-stat >  span {
+    display:block;
+    font-weight:bold;
+}
+.nav-link-profile.active {
+    position: relative;
+}
+.nav-link-profile.active:after {
+    content:"";
+    width:100%;
+    position: absolute;
+    height:5px;
+    background:#0686ff;
+    bottom:0;
+    left:0;
+}
+
+.media-body {
+    align-self:center;
+}
+
+.media-body p {
+    color:white;
+    font-weight:bold;
+    font-size:1.2em;
+}
+
+.handle {
+    color:white;
+    font-size:0.8em;
+    font-weight:300;
+}
+
+.icon-wrapper {
+    flex:auto;
+}
+
+.icon-wrapper > i {
+    color:white;
+}
