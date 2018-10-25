@@ -98,3 +98,6 @@ ul li{
 .icon-wrapper > i {
     color:white;
 }
+.twitter-logo-center{
+    position:absolute;left:50%;right:50%;top:1%;
+}
