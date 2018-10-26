@@ -51,8 +51,8 @@ export class ApiService {
   }
 
   //method to write new post
-writeNewPost(newPostObject){
-  return this.http.post(this.baseUrl + `posts`, newPostObject);
-}
+  writeNewPost(newPostObject) {
+    return this.http.post(this.baseUrl + `posts`, newPostObject);
+  }
 
 }
