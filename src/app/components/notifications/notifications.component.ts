@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-notifications',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private api:ApiService) { }
+  notificationInfoObject:any;
   ngOnInit() {
+    this.notificationData();
+  }
+
+  notificationData(){
+    this.api.getNotificationData().subscribe((res)=>{
+      this.notificationInfoObject = res;
+      console.log(`notification data`,this.notificationInfoObject);
+    },(err)=>{
+      console.log(`error occured`,err);
+    })
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-me',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private api:ApiService) { }
+  meInfoObject:any;
   ngOnInit() {
+    this.meData();
+  }
+  meData(){
+    this.api.getMyData().subscribe((res)=>{
+      this.meInfoObject = res;
+      console.log(`me data`,this.meInfoObject);
+    },(err)=>{
+      console.log(`error occured`,err);
+    })
   }
 
 }

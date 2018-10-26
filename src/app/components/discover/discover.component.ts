@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-discover',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscoverComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private api:ApiService) { }
+  discoverInfoObject:any;
   ngOnInit() {
+    this.discoverData();
   }
 
+  discoverData(){
+    this.api.getDiscoverData().subscribe((res)=>{
+      this.discoverInfoObject = res;
+      console.log(`discover data`,this.discoverInfoObject);
+    },(err)=>{
+      console.log(`error occured`,err);
+    })
+  }
+  
 }
