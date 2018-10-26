@@ -19,6 +19,7 @@ export class BodyComponent implements OnInit {
   ngOnInit() {
   }
 
+  //method to write new post using http.post method in api service
   writeNewPost(){
     this.showForm = !this.showForm;
     console.log(`NEW POST DATA`,this.newPostData);
