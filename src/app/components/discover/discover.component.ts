@@ -8,19 +8,22 @@ import { ApiService } from '../../services/api.service';
 })
 export class DiscoverComponent implements OnInit {
 
-  constructor(private api:ApiService) { }
-  discoverInfoObject:any;
+  constructor(private api: ApiService) { }
+  discoverInfoObject: any;
   ngOnInit() {
     this.discoverData();
   }
 
-  discoverData(){
-    this.api.getDiscoverData().subscribe((res)=>{
+  /**
+  * @description - method to call data from api for Discover tab main section
+  */
+  discoverData() {
+    this.api.getDiscoverData().subscribe((res) => {
       this.discoverInfoObject = res;
-      console.log(`discover data`,this.discoverInfoObject);
-    },(err)=>{
-      console.log(`error occured`,err);
+      console.log(`discover data`, this.discoverInfoObject);
+    }, (err) => {
+      console.log(`error occured`, err);
     })
   }
-  
+
 }

@@ -8,17 +8,20 @@ import { ApiService } from '../../services/api.service';
 })
 export class MeComponent implements OnInit {
 
-  constructor(private api:ApiService) { }
-  meInfoObject:any;
+  constructor(private api: ApiService) { }
+  meInfoObject: any;
   ngOnInit() {
     this.meData();
   }
-  meData(){
-    this.api.getMyData().subscribe((res)=>{
+  /**
+  * @description - method to call data from api for ME tab main section
+  */
+  meData() {
+    this.api.getMyData().subscribe((res) => {
       this.meInfoObject = res;
-      console.log(`me data`,this.meInfoObject);
-    },(err)=>{
-      console.log(`error occured`,err);
+      console.log(`me data`, this.meInfoObject);
+    }, (err) => {
+      console.log(`error occured`, err);
     })
   }
 

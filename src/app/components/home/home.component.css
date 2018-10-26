@@ -1,5 +1,8 @@
-
 .side-feed {
     height:50px;
     width:50px;
+}
+
+.height-limit{
+    max-height:500px;overflow:hidden
 }

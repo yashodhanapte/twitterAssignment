@@ -10,3 +10,14 @@
 .side-feed-account {
 
 }
+.height-limit{
+    max-height:550px;
+    overflow:hidden;
+}
+
+.trending-list{
+    list-style: none;
+}
+.blue-font{
+    color:#0686ff;
+}

@@ -1,10 +1,19 @@
-
-
-<div class="card">
-    <div class="card-header">
-        Featured
-    </div>
+<div class="card tweet-image">
     <div class="card-body">
-            <router-outlet></router-outlet>
+        <!-- view of router to dynamically display component based on URL -->
+        <router-outlet></router-outlet>
+    </div>
+    <!-- toggles display of form for new post -->
+    <div (click)="showForm=!showForm">
+        <img src="../../assets/images/tweeticon.png" height="60" width="60" class="tweet-icon">
+    </div>
+
+    <!-- simple form to take input from user for writing new tweet -->
+    <div class="form-one" *ngIf="showForm">
+        <span>Title: </span>
+        <input type="text" [(ngModel)]="newPostData.title">
+        <span>Body: </span>
+        <input type="text" [(ngModel)]="newPostData.body">
+        <button class="btn btn-primary" (click)="writeNewPost()">Tweet</button>
     </div>
 </div>

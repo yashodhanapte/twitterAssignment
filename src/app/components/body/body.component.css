@@ -1,0 +1,10 @@
+.tweet-image{
+ 
+    /* background-position: bottom right;
+    background-attachment: fixed; */
+    flex: 1;
+    flex-direction: row;
+}
+.tweet-icon{
+    cursor:pointer;
+}

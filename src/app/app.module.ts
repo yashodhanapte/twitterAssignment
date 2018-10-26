@@ -13,7 +13,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { DiscoverComponent } from './components/discover/discover.component';
 import { MeComponent } from './components/me/me.component';
 import { ErrorComponent } from './components/error/error.component';
-
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'notifications', component: NotificationsComponent },
@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

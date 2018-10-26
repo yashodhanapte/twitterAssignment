@@ -8,18 +8,21 @@ import { ApiService } from '../../services/api.service';
 })
 export class NotificationsComponent implements OnInit {
 
-  constructor(private api:ApiService) { }
-  notificationInfoObject:any;
+  constructor(private api: ApiService) { }
+  notificationInfoObject: any;
   ngOnInit() {
     this.notificationData();
   }
 
-  notificationData(){
-    this.api.getNotificationData().subscribe((res)=>{
+  /**
+  * @description - method to call data from api for Notification tab main section
+  */
+  notificationData() {
+    this.api.getNotificationData().subscribe((res) => {
       this.notificationInfoObject = res;
-      console.log(`notification data`,this.notificationInfoObject);
-    },(err)=>{
-      console.log(`error occured`,err);
+      console.log(`notification data`, this.notificationInfoObject);
+    }, (err) => {
+      console.log(`error occured`, err);
     })
   }
 

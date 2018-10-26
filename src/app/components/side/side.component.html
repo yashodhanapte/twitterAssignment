@@ -2,26 +2,20 @@
   <h2 class="mb-2">Who to follow</h2>
 
   <ul class="list-unstyled">
-    <li class="media">
+    <li class="media" *ngFor="let users of usersList | slice: 0:5">
       <img class="mr-3 side-feed" src="../../../assets/images/profile-photo.png" alt="Generic placeholder image">
       <div class="media-body">
-        <h5 class="side-feed-account mt-0 mb-1">List-based media object</h5>
-        <p>Followed by XYZ</p>
+        <h5 class="side-feed-account mt-0 mb-1">{{users.name}}</h5>
+        <p>{{2+2}}</p>
       </div>
     </li>
-    <li class="media my-4">
-        <img class="mr-3 side-feed" src="../../../assets/images/profile-photo.png" alt="Generic placeholder image">
-        <div class="media-body">
-          <h5 class="side-feed-account mt-0 mb-1">List-based media object</h5>
-          <p>Followed by XYZ</p>
-        </div>
-    </li>
-    <li class="media">
-        <img class="mr-3 side-feed" src="../../../assets/images/profile-photo.png" alt="Generic placeholder image">
-        <div class="media-body">
-          <h5 class="side-feed-account mt-0 mb-1">List-based media object</h5>
-          <p>Followed by XYZ</p>
-        </div>
+  </ul>
+</div>
+<div class="height-limit">
+  <h2 class="blue-font">Trending</h2>
+  <ul class="trending-list">
+    <li *ngFor="let trends of trendingPosts | slice: 0:5">
+      {{trends.title}}
     </li>
   </ul>
 </div>

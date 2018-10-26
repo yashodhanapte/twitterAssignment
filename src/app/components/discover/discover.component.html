@@ -1,3 +1,11 @@
-<p>
-  discover works!
-</p>
+<div>
+  <ul class="list-unstyled">
+    <li class="media" *ngFor="let post of discoverInfoObject | slice: 0:5"> <!--limiting posts to 5 -->
+      <img class="mr-3 side-feed" src="../../../assets/images/profile-photo.png" alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="side-feed-account mt-0 mb-1">{{post.title}}</h5>
+        <p>{{post.url}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
